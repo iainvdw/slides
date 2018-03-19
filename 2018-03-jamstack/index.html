@@ -1,49 +1,248 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>🍓 JAMstack 🍓 - Iain van der Wiel</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>🍓 JAMstack 🍓</h1>
+				<p>Iain van der Wiel</p>
+			</section>
+			<section>
+				<h2>Wat is JAMstack?</h2>
+				<p class="fragment">JAMstack is een "stack" van technieken om met code, content en templates "static sites" te genereren.</p>
+			</section>
+			<section>
+				<h2>JAM? Stack?</h2>
+				<p class="fragment">De stack:</p>
+				<ul>
+					<li class="fragment">JavaScript
+						<span class="fragment">(code)</span>
+					</li>
+					<li class="fragment">API's
+						<span class="fragment">(content)</span>
+					</li>
+					<li class="fragment">Markup
+						<span class="fragment">(templates)</span>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Static sites zijn:</h2>
+				<ul>
+					<li class="fragment">
+						<em>Snel</em>
+						<br>
+						<span class="fragment">
+							<small>Site wordt opgebouwd tot simpele files</small>
+						</span>
+					</li>
+					<li class="fragment">
+						<em>Veilig</em>
+						<br>
+						<span class="fragment">
+							<small>Want geen directe requests naar server/database door de bezoeker</small>
+						</span>
+					</li>
+					<li class="fragment">
+						<em>Schaalbaar</em>
+						<br>
+						<span class="fragment">
+							<small>Hosting is simpel op te zetten en op te schalen</small>
+						</span>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Statisch?</h2>
+				<p class="fragment">Maar wij maken toch dynamische websites?</p>
+				<p class="fragment">Met een CMS?</p>
+				<p class="fragment">En frameworks?</p>
+				<p class="fragment">En API's?</p>
+			</section>
+			<section>
+				<h2>Dynamisch?</h2>
+				<p>
+					Content is beheerbaar, dus dynamisch
+					<span class="fragment">?</span>
+				</p>
+				<img src="img/of-toch-niet.jpg" alt="Duits leraar die zegt 'of toch niet?'" class="fragment">
+			</section>
+			<section>
+				<h2>Content:</h2>
+				<ul>
+					<li class="fragment">Wordt beheerd in een CMS</li>
+					<li class="fragment">Tussen wijzigingen is deze statisch</li>
+					<li class="fragment">Tijd tussen wijzingen kan relatief lang zijn</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Waarom zou je hier dan nog een
+					<br>
+					<span class="fragment">
+						<em>CMS</em>
+					</span>
+					<span class="fragment"> of
+						<em>framework</em>
+					</span>
+					<span class="fragment"> met een
+						<em>database</em>
+						<br> voor aanspreken?</span>
+				</h2>
+			</section>
+			<section>
+				<h2>Enter 🍓 JAMstack 🍓</h2>
+				<p>Wat lost JAMstack op in deze situaties?</p>
+				<ul>
+					<li class="fragment">
+						<em>Geen overhead</em> van draaien CMS / framework</li>
+					<li class="fragment">
+						<em>Verminderde complexiteit</em> hosting en server</li>
+					<li class="fragment">
+						<em>Geen traagheid</em> door zware API's</li>
+					<li class="fragment">
+						<em>Verbeterde veiligheid</em> door statische files</li>
+					<li class="fragment">
+						<em>Meer vrijheid</em> door ontkoppelde front-end</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>Files worden gegenereerd bij deployment</li>
+						<li>Elke hosting die een bak bestanden kan serveren is voldoende</li>
+						<li>Bezoeker heeft geen last van externe services omdat deze aangesproken worden bij deployment</li>
+						<li>Omdat er geen CMS of framework bij een request aan te pas komt, zijn er ook veel minder/geen aanvalshoeken</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>But wait, there's more!</h2>
+				<p class="fragment">Dit wordt vele malen makkelijker:</p>
+				<p>
+					<em class="fragment">Global CDN,</em>
+					<em class="fragment">Caching,</em>
+					<em class="fragment">Cache invalidation,</em>
+					<em class="fragment">Atomic deploys,</em>
+					<em class="fragment">Incremental build,</em>
+					<em class="fragment">Rollbacks,</em>
+					<em class="fragment">Continuous deployment,</em>
+					<em class="fragment">Critical rendering,</em>
+					<em class="fragment">etc.,</em>
+					<em class="fragment">etc.,</em>
+					<em class="fragment">etc.</em>
+				</p>
+			</section>
+			<section>
+				<h2>Waar is dit
+					<em>uitermate</em> geschikt voor?</h2>
+				<ul>
+					<li class="fragment">Sites met voornamelijk content</li>
+					<li class="fragment">Reeds opgezette API's</li>
+					<li class="fragment">Performance</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Waar is dit
+					<em>minder</em> geschikt voor?</h2>
+				<ul>
+					<li class="fragment">Real-time / gebruikers specifieke data</li>
+					<li class="fragment">Webshops</li>
+					<li class="fragment">Dashboards</li>
+					<li class="fragment">Afhandeling formulieren</li>
+					<li class="fragment">Zoeken</li>
+				</ul>
+				<p>
+					<small class="fragment">Maar
+						<em>niet</em> onmogelijk...</small>
+				</p>
+			</section>
+			<section>
+				<h2>Hoe doen we dit dan?</h2>
+				<ul>
+					<li class="fragment">Inrichten CMS / framework met een API</li>
+					<li class="fragment">Static site generator inrichten</li>
+					<li class="fragment">Deployment inrichten die een static site genereert</li>
+					<li class="fragment">Simpele hosting van een lading bestanden</li>
+					<li class="fragment">Global CDN voor supersnelle wereldwijde hosting</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Waarmee doen we dit?</h2>
+				<p>
+					<em>Static site generators</em>
+				</p>
+				<ul>
+					<li class="fragment">Jekyll (Ruby)</li>
+					<li class="fragment">Gatsby (Node.js)</li>
+					<li class="fragment">Hugo (Go)</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Waarmee doen we dit?</h2>
+				<p>
+					<em>CMS</em>
+				</p>
+				<ul>
+					<li class="fragment">Netlify CMS</li>
+					<li class="fragment">Contentful</li>
+					<li class="fragment">Headless Drupal / WordPress</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Waarmee doen we dit?</h2>
+				<p>
+					<em>Hosting / deployment</em>
+				</p>
+				<ul>
+					<li class="fragment">Amazon AWS</li>
+					<li class="fragment">Google Cloud Storage</li>
+					<li class="fragment">Surge.sh</li>
+					<li class="fragment">Zeit.co</li>
+					<li class="fragment">Netlify</li>
+				</ul>
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			progress: true,
+			history: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
 </html>
