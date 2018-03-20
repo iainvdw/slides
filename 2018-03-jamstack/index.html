@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>🍓 JAMstack 🍓 - Iain van der Wiel</title>
+	<title>🍓 JAMstack 🍓 - Moderne front-ends met static sites</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css">
@@ -27,25 +27,38 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h1>🍓 JAMstack 🍓</h1>
-				<p>Iain van der Wiel</p>
+				<h1>🍓
+					<em>JAM</em>stack 🍓</h1>
+				<p>Moderne front-ends met static sites</p>
 			</section>
 			<section>
 				<h2>Wat is JAMstack?</h2>
-				<p class="fragment">JAMstack is een "stack" van technieken om met code, content en templates "static sites" te genereren.</p>
+				<p class="fragment">JAMstack is een "stack" van technieken om met
+					<em>code</em>,
+					<em>content</em> en
+					<em>templates</em> "static sites" te genereren.</p>
 			</section>
 			<section>
 				<h2>JAM? Stack?</h2>
 				<p class="fragment">De stack:</p>
 				<ul>
 					<li class="fragment">JavaScript
-						<span class="fragment">(code)</span>
+						<span class="fragment">
+							<em>(code)</em>
+						</span>
 					</li>
 					<li class="fragment">API's
-						<span class="fragment">(content)</span>
+						<span class="fragment">
+							<em>(content)</em>
+						</span>
 					</li>
 					<li class="fragment">Markup
-						<span class="fragment">(templates)</span>
+						<span class="fragment">
+							<em>(templates)</em>
+						</span>
+					</li>
+					<li class="fragment">Wordt samengevoegd tot een
+						<em>static site</em>
 					</li>
 				</ul>
 			</section>
@@ -143,13 +156,16 @@
 					<em class="fragment">Global CDN,</em>
 					<em class="fragment">Caching,</em>
 					<em class="fragment">Cache invalidation,</em>
+					<br>
 					<em class="fragment">Atomic deploys,</em>
-					<em class="fragment">Incremental build,</em>
+					<em class="fragment">Incremental builds,</em>
 					<em class="fragment">Rollbacks,</em>
+					<br>
 					<em class="fragment">Continuous deployment,</em>
+					<em class="fragment">Command line deployment,</em>
+					<br>
 					<em class="fragment">Critical rendering,</em>
-					<em class="fragment">etc.,</em>
-					<em class="fragment">etc.,</em>
+					<em class="fragment">Asset optimization,</em>
 					<em class="fragment">etc.</em>
 				</p>
 			</section>
@@ -157,9 +173,9 @@
 				<h2>Waar is dit
 					<em>uitermate</em> geschikt voor?</h2>
 				<ul>
-					<li class="fragment">Sites met voornamelijk content</li>
-					<li class="fragment">Reeds opgezette API's</li>
-					<li class="fragment">Performance</li>
+					<li class="fragment">Sites met veel content</li>
+					<li class="fragment">Content uit bestaande API's</li>
+					<li class="fragment">Vraag om hoge performance van website</li>
 				</ul>
 			</section>
 			<section>
@@ -168,9 +184,8 @@
 				<ul>
 					<li class="fragment">Real-time / gebruikers specifieke data</li>
 					<li class="fragment">Webshops</li>
-					<li class="fragment">Dashboards</li>
 					<li class="fragment">Afhandeling formulieren</li>
-					<li class="fragment">Zoeken</li>
+					<li class="fragment">Search</li>
 				</ul>
 				<p>
 					<small class="fragment">Maar
@@ -178,12 +193,42 @@
 				</p>
 			</section>
 			<section>
+				<h2>Oplossingen</h2>
+				<ul>
+					<li class="fragment">
+						<em>Single Page Apps</em>
+						<br>
+						<small>React, Angular, Vue</small>
+					</li>
+					<li class="fragment">
+						<em>Payment &amp; Shopping cart services</em>
+						<br>
+						<small>Shopify, Stripe</small>
+					</li>
+					<li class="fragment">
+						<em>Form services</em>
+						<br>
+						<small>Wufoo, TypeForm, Netlify Forms</small>
+					</li>
+					<li class="fragment">
+						<em>Search services</em>
+						<br>
+						<small>Google Search, Amazon Search, Algolia</small>
+					</li>
+					<li class="fragment">
+						<em>Authentication services</em>
+						<br>
+						<small>Auth0, OAuth, Netlify Identity</small>
+					</li>
+				</ul>
+			</section>
+			<section>
 				<h2>Hoe doen we dit dan?</h2>
 				<ul>
 					<li class="fragment">Inrichten CMS / framework met een API</li>
 					<li class="fragment">Static site generator inrichten</li>
-					<li class="fragment">Deployment inrichten die een static site genereert</li>
 					<li class="fragment">Simpele hosting van een lading bestanden</li>
+					<li class="fragment">Deployment inrichten die een static site genereert</li>
 					<li class="fragment">Global CDN voor supersnelle wereldwijde hosting</li>
 				</ul>
 			</section>
@@ -194,14 +239,14 @@
 				</p>
 				<ul>
 					<li class="fragment">Jekyll (Ruby)</li>
-					<li class="fragment">Gatsby (Node.js)</li>
+					<li class="fragment">Gatsby (Node.js, React)</li>
 					<li class="fragment">Hugo (Go)</li>
 				</ul>
 			</section>
 			<section>
 				<h2>Waarmee doen we dit?</h2>
 				<p>
-					<em>CMS</em>
+					<em>Headless CMS</em>
 				</p>
 				<ul>
 					<li class="fragment">Netlify CMS</li>
@@ -222,6 +267,17 @@
 					<li class="fragment">Zeit.co</li>
 					<li class="fragment">Netlify</li>
 				</ul>
+			</section>
+			<section>
+				<h2>Dus...</h2>
+				<p class="fragment">
+					<em>Ontkoppel</em> de front-end met
+					<em>JAMstack</em> om met code, API's en content
+					<em>snelle en veilige websites</em> te bouwen.
+				</p>
+			</section>
+			<section>
+				<h2>Vraagjes?</h2>
 			</section>
 		</div>
 	</div>
