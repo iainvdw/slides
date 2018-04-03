@@ -56,8 +56,36 @@ $selectionBackgroundColor: $magenta;
 // 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
 // }
 
-
-
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+em {
+	color: $orange;
+}
+
+a {
+	text-decoration: underline;
+}
+
+/*********************************************
+ * Grid
+ *********************************************/
+.reveal {
+	.grid {
+		display: grid;
+		padding: 20px;
+		background: $blue;
+	}
+
+	.cell {
+		border: 1px dashed $base3;
+		padding: 15px;
+		color: $base3;
+		text-align: center;
+		background: $violet;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

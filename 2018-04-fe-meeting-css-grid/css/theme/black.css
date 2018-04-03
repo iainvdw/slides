@@ -7,6 +7,9 @@
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
+em {
+  color: #42affa; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
@@ -50,7 +53,7 @@ body {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
+  text-transform: normal;
   text-shadow: none;
   word-wrap: break-word; }
 
@@ -58,7 +61,7 @@ body {
   font-size: 2.5em; }
 
 .reveal h2 {
-  font-size: 1.6em; }
+  font-size: 1.4em; }
 
 .reveal h3 {
   font-size: 1.3em; }
@@ -142,10 +145,10 @@ body {
 .reveal pre {
   display: block;
   position: relative;
-  width: 90%;
+  width: 70%;
   margin: 20px auto;
   text-align: left;
-  font-size: 0.55em;
+  font-size: 0.65em;
   font-family: monospace;
   line-height: 1.2em;
   word-wrap: break-word;
@@ -157,8 +160,6 @@ body {
 
 .reveal pre code {
   display: block;
-  padding: 5px;
-  overflow: auto;
   max-height: 400px;
   word-wrap: normal; }
 

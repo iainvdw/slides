@@ -1,49 +1,331 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/solarized.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/cobalt2.prism.css">
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>CSS Grid Layout</h1>
+        <img src="img/grid.png" width="75%" alt="Een Phi grid op basis van een Golden Ratio vlakverdeling.">
+      </section>
+      <section>
+        <h2>Wat is Grid Layout?</h2>
+        <p>Een nieuwe manier om een
+          <em>twee-dimensionale layout</em> te definiëren op een
+          <em>pagina</em> of
+          <em>element</em>.</p>
+      </section>
+      <section>
+        <h2>Wat doet Grid Layout?</h2>
+        <ul>
+          <li class="fragment">Het opdelen van een container in grid cells</li>
+          <li class="fragment">Met behulp van rijen en kolommen</li>
+          <li class="fragment">Om binnen die cells elementen te positioneren</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Hoe dan?!</h2>
+        <pre class="line-numbers"><code class="lang-css">
+          .grid {
+            display: grid;
+          }
+        </code></pre>
+      </section>
+      <section>
+        <h2>Verdeel en heersch™</h2>
+        <p class="fragment">Verschillende manieren om vlakken te definiëren</p>
+        <ul>
+          <li class="fragment">Explicit rows</li>
+          <li class="fragment">Explicit columns</li>
+          <li class="fragment">Implicit rows</li>
+          <li class="fragment">Implicit columns</li>
+          <li class="fragment">Areas</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Explicit rows &amp; columns</h2>
+        <pre class="line-numbers"><code class="lang-css">
+          /* Voluit */
+          .grid {
+            display: grid;
+            grid-template-rows: 1fr 200px auto;
+            grid-template-columns: 1fr auto 1fr;
+          }
+
+          /* Shorthand */
+          .grid {
+            grid-template: 1fr 200px auto / 1fr auto 1fr;
+          }
+        </code></pre>
+      </section>
+      <section>
+        <h2>Explicit rows &amp; columns</h2>
+        <div class="grid" style="grid-template-rows: 1fr 200px auto; grid-template-columns: 1fr auto 1fr;">
+          <div class="cell">Cel 1</div>
+          <div class="cell">Cel 2</div>
+          <div class="cell">Cel 3</div>
+          <div class="cell">Cel 4</div>
+          <div class="cell">Cel 5</div>
+          <div class="cell">Cel 6</div>
+          <div class="cell">Cel 7</div>
+          <div class="cell">Cel 8</div>
+          <div class="cell">Cel 9</div>
+        </div>
+      </section>
+      <section>
+        <h2>Implicit rows &amp; columns</h2>
+        <pre class="line-numbers"><code class="lang-css">
+          .grid {
+            display: grid;
+            grid-template-columns: 1fr auto 2fr;
+            grid-auto-rows: 1fr 2fr;
+          }
+        </code></pre>
+      </section>
+      <section>
+        <h2>Implicit rows &amp; columns</h2>
+        <div class="grid" style="grid-template-columns: 1fr auto 2fr; grid-auto-rows: 1fr 2fr;">
+          <div class="cell">Cel 1</div>
+          <div class="cell">Cel 2</div>
+          <div class="cell">Cel 3</div>
+          <div class="cell">Cel 4</div>
+          <div class="cell">Cel 5</div>
+          <div class="cell">Cel 6</div>
+          <div class="cell">Cel 7</div>
+          <div class="cell">Cel 8</div>
+          <div class="cell">Cel 9</div>
+          <div class="cell">Cel 10</div>
+          <div class="cell">Cel 11</div>
+          <div class="cell">Cel 12</div>
+        </div>
+      </section>
+      <section>
+        <h2>From the gutter</h2>
+        <pre class="line-numbers"><code class="lang-css">
+          /* Voluit */
+          .grid {
+            grid-row-gap: 20px;
+            grid-column-gap: 50px;
+          }
+
+          /* Shorthand */
+          .grid {
+            grid-gap: 20px 50px;
+          }
+        </code></pre>
+      </section>
+      <section>
+        <h2>From the gutter</h2>
+        <div class="grid" style="grid-template-rows: 1fr 200px auto; grid-template-columns: 1fr auto 1fr; grid-column-gap: 50px; grid-row-gap: 20px;">
+          <div class="cell">Cel 1</div>
+          <div class="cell">Cel 2</div>
+          <div class="cell">Cel 3</div>
+          <div class="cell">Cel 4</div>
+          <div class="cell">Cel 5</div>
+          <div class="cell">Cel 6</div>
+          <div class="cell">Cel 7</div>
+          <div class="cell">Cel 8</div>
+          <div class="cell">Cel 9</div>
+        </div>
+      </section>
+      <section>
+        <h2>Naming things</h2>
+        <pre class="line-numbers"><code class="lang-css">
+          /* Voluit */
+          .grid {
+            grid-gap: 20px;
+            grid-template-columns: 6fr 6fr 1fr 6fr;
+            grid-template-rows: 1fr 2fr 1fr;
+            grid-template-areas:
+              "header header header header" 
+              "main   main   .      sidebar"
+              "footer footer footer footer" 
+          }
+
+          /* Shorthand */
+          .grid {
+            grid-gap: 20px;
+            grid-template:
+              "header header header header"   1fr
+              "main   main   .      sidebar"  2fr
+              "footer footer footer footer"   1fr
+              / 6fr   6fr    1fr    6fr;
+          }
+        </code></pre>
+      </section>
+      <section>
+        <h2>Naming things</h2>
+        <div class="grid" style='grid-gap: 20px; grid-template: "header header header header" 1fr
+              "main main . sidebar" 2fr
+              "footer footer footer footer" 1fr
+              / 6fr 6fr 1fr 6fr'>
+          <div class="cell" style="grid-area: header;">Header</div>
+          <div class="cell" style="grid-area: main;">Main</div>
+          <div class="cell" style="grid-area: sidebar;">Sidebar</div>
+          <div class="cell" style="grid-area: footer;">Footer</div>
+        </div>
+      </section>
+      <section>
+        <h2>Waarvoor gebruik je Grid Layout?</h2>
+        <ul>
+          <li class="fragment">Wanneer je elementen zowel verticaal als horizontaal wilt kunnen positioneren</li>
+          <li class="fragment">Wanneer items zijn opgemaakt in een grid (producten, nieuws)</li>
+          <li class="fragment">Complexe layouts met over elkaar gepositioneerde elementen (posters, headers, (typo)grafische layouts)</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Flex vs grid</h2>
+        <img src="img/flex-grid.png" alt="Afbeelding die verschillen toont tussen flexbox layout en grid layout">
+      </section>
+      <section>
+        <h2>Flex vs grid</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <p>
+                  <strong>Flex</strong>
+                </p>
+              </th>
+              <th>
+                <p>
+                  <strong>Grid</strong>
+                </p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>Werkt op de
+                  <em>content</em>
+                </p>
+              </td>
+              <td>
+                <p>Werkt op de
+                  <em>container</em>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>
+                  <em>Gedrag op container</em>, formaten op elementen
+                </p>
+              </td>
+              <td>
+                <p>Formaten op container,
+                  <em>gedrag op elementen</em>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>Waar is CSS Grid Layout goed in?</h2>
+        <ul>
+          <li class="fragment">Elementen over 2 assen positioneren</li>
+          <li class="fragment">Elementen elkaar laten overlappen</li>
+          <li class="fragment">Layout op container niveau</li>
+          <li class="fragment">Layout op basis van media queries</li>
+          <li class="fragment">Kolommen aanmaken / laten passen adhv content</li>
+          <li class="fragment">Consistente ruimtes tussen kolommen en rijen</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Waar kan CSS Grid niet (goed)?</h2>
+        <ul>
+          <li class="fragment">Elementen "buiten de lijntjes" plaatsen</li>
+          <li class="fragment">Masonry-achtige layouts</li>
+          <li class="fragment">Animeren van cell posities*</li>
+        </ul>
+        <p class="fragment">
+          <small>* Niet met CSS, wel met
+            <a href="https://codepen.io/aholachek/pen/VXjOPB" target="_blank">JS</a> 🔥
+          </small>
+        </p>
+      </section>
+      <section>
+        <h2>Voorbeelden</h2>
+        <ul>
+          <li>
+            <a href="https://codepen.io/Rplus/pen/JWNEOO">Codepen</a>
+          </li>
+          <li>
+            <a href="https://iainvdw.github.io/css-layout-workshop/oefeningen/06-poster/poster.html">Poster</a>
+          </li>
+          <li>
+            <a href="https://amarant.ebox/app_dev.php/nieuws">Amarant nieuws</a>
+          </li>
+          <li>
+            <a href="#">Handpicked festival schedule (TBA)</a>
+          </li>
+          <li>
+            <a href="#">Bluebird Day (TBA)</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Resources</h2>
+        <ul>
+          <li class="fragment">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid">MDN - Grid</a>
+          </li>
+          <li class="fragment">
+            <a href="http://cssgridgarden.com/#nl">CSS Grid Garden</a>
+          </li>
+          <li class="fragment">
+            <a href="https://cssgrid.io">CSS Grid course van Wes Bos</a>
+          </li>
+          <li class="fragment">
+            <a href="https://gridbyexample.com/examples/">Grid by example</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      progress: true,
+      history: true,
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/prism/prism.js', async: true },
+      ]
+    });
+  </script>
+</body>
+
 </html>

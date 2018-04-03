@@ -146,10 +146,10 @@ body {
 .reveal pre {
   display: block;
   position: relative;
-  width: 90%;
+  width: 70%;
   margin: 20px auto;
   text-align: left;
-  font-size: 0.55em;
+  font-size: 0.65em;
   font-family: monospace;
   line-height: 1.2em;
   word-wrap: break-word;
@@ -161,8 +161,6 @@ body {
 
 .reveal pre code {
   display: block;
-  padding: 5px;
-  overflow: auto;
   max-height: 400px;
   word-wrap: normal; }
 
@@ -266,3 +264,27 @@ body {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+em {
+  color: #cb4b16; }
+
+a {
+  text-decoration: underline; }
+
+/*********************************************
+ * Grid
+ *********************************************/
+.reveal .grid {
+  display: grid;
+  padding: 20px;
+  background: #268bd2; }
+
+.reveal .cell {
+  border: 1px dashed #fdf6e3;
+  padding: 15px;
+  color: #fdf6e3;
+  text-align: center;
+  background: #6c71c4;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
