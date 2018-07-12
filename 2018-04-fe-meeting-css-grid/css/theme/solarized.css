@@ -288,3 +288,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.reveal .pre-small {
+  font-size: 1rem; }

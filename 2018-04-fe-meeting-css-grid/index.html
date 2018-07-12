@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="lib/css/cobalt2.prism.css">
 
   <!-- Printing and PDF exports -->
-  <script>
+  <script type="text/javascript">
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
@@ -188,6 +188,159 @@
         </div>
       </section>
       <section>
+        <h2>Cell your soul</h2>
+        <div class="grid" style="grid-auto-rows: 100px; grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+          <div class="cell pre-small" style="align-self: start; justify-self: start;">
+            align-self: start;<br>
+            justify-self: start;
+          </div>
+          <div class="cell pre-small" style="align-self: center; justify-self: start;">
+            align-self: center;<br>
+            justify-self: start;
+          </div>
+          <div class="cell pre-small" style="align-self: end; justify-self: start;">
+            align-self: end;<br>
+            justify-self: start;
+          </div>
+          <div class="cell pre-small" style="align-self: start; justify-self: start;">
+            align-self: start;<br>
+            justify-self: start;
+          </div>
+          <div class="cell pre-small" style="align-self: start; justify-self: center;">
+            align-self: start;<br>
+            justify-self: center;
+          </div>
+          <div class="cell pre-small" style="align-self: start; justify-self: end;">
+            align-self: start;<br>
+            justify-self: end;
+          </div>
+          <div class="cell pre-small" style="align-self: stretch; justify-self: stretch;">
+            align-self: stretch;<br>
+            justify-self: stretch;
+          </div>
+          <div class="cell pre-small" style="align-self: stretch; justify-self: stretch;">
+            align-self: stretch;<br>
+            justify-self: start;
+          </div>
+          <div class="cell pre-small" style="align-self: stretch; justify-self: end;">
+            align-self: stretch;<br>
+            justify-self: end;
+          </div>
+          <div class="cell pre-small" style="align-self: stretch; justify-self: stretch;">
+            align-self: stretch;<br>
+            justify-self: stretch;
+          </div>
+          <div class="cell pre-small" style="align-self: start; justify-self: stretch;">
+            align-self: start;<br>
+            justify-self: stretch;
+          </div>
+          <div class="cell pre-small" style="align-self: end; justify-self: stretch;">
+            align-self: end;<br>
+            justify-self: stretch;
+          </div>
+        </div>
+        <small class="fragment"><br>Of gebruik <code>place-self</code> als shorthand voor <code>align-self</code> en <code>justify-self</code></small>
+      </section>
+      <section>
+        <h2><code>span</code>nend</h2>
+        <div class="grid" style="grid-auto-rows: 1fr; grid-template-columns: repeat(3, 1fr); grid-gap: 20px;">
+          <div class="cell pre-small" style="grid-column: span 3; grid-row: span 1;">
+            grid-column: span 3;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 2;">
+            grid-column: span 1;<br>
+            grid-row: span 2;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 2;grid-row: span 1;">
+            grid-column: span 2;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 2;">
+            grid-column: span 1;<br>
+            grid-row: span 2;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 1;">
+            grid-column: span 1;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 2;grid-row: span 1;">
+            grid-column: span 2;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 1;">
+            grid-column: span 1;<br>
+            grid-row: span 1;
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Grid auto flow - dense</h2>
+        <div class="grid" style="grid-auto-rows: 1fr; grid-template-columns: repeat(3, 1fr); grid-gap: 20px; grid-auto-flow: dense;">
+          <div class="cell pre-small" style="grid-column: span 3; grid-row: span 1;">
+            grid-column: span 3;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 2;">
+            grid-column: span 1;<br>
+            grid-row: span 2;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 2;grid-row: span 1;">
+            grid-column: span 2;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 2;">
+            grid-column: span 1;<br>
+            grid-row: span 2;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 1;">
+            grid-column: span 1;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 2;grid-row: span 1;">
+            grid-column: span 2;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 1;">
+            grid-column: span 1;<br>
+            grid-row: span 1;
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Grid auto flow - column</h2>
+        <div class="grid" style="grid-auto-rows: 1fr; grid-template-columns: repeat(3, 1fr); grid-gap: 20px; grid-auto-flow: column;">
+          <div class="cell pre-small" style="grid-column: span 3; grid-row: span 1;">
+            grid-column: span 3;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 2;">
+            grid-column: span 1;<br>
+            grid-row: span 2;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 2;grid-row: span 1;">
+            grid-column: span 2;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 2;">
+            grid-column: span 1;<br>
+            grid-row: span 2;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 1;">
+            grid-column: span 1;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 2;grid-row: span 1;">
+            grid-column: span 2;<br>
+            grid-row: span 1;
+          </div>
+          <div class="cell pre-small" style="grid-column: span 1; grid-row: span 1;">
+            grid-column: span 1;<br>
+            grid-row: span 1;
+          </div>
+        </div>
+      </section>
+      <section>
         <h2>Waarvoor gebruik je Grid Layout?</h2>
         <ul>
           <li class="fragment">Wanneer je elementen zowel verticaal als horizontaal wilt kunnen positioneren</li>
@@ -256,7 +409,7 @@
         </ul>
       </section>
       <section>
-        <h2>Waar kan CSS Grid niet (goed)?</h2>
+        <h2>Wat kan CSS Grid niet (goed)?</h2>
         <ul>
           <li class="fragment">Elementen "buiten de lijntjes" plaatsen</li>
           <li class="fragment">Masonry-achtige layouts</li>
