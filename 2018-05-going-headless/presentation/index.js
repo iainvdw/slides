@@ -72,12 +72,19 @@ export default class Presentation extends React.Component {
           </Heading>
           <Appear>
             <Text margin="10px 0 0" textColor="tertiary">
-              Een <b>ontkoppeld CMS</b> waar externe systemen mee communiceren
-              om data/content uit op te vragen
+              Een <b>ontkoppeld CMS</b> waar externe applicaties mee
+              communiceren om data/content uit op te vragen
             </Text>
           </Appear>
         </Slide>
-        <Slide>
+        <Slide
+          notes={
+            <ul>
+              <li>Content Editor: Gaat content in</li>
+              <li>API: Gaat content uit</li>
+            </ul>
+          }
+        >
           <Heading size={2} lineHeight={1} textColor="secondary">
             Het CMS
           </Heading>
@@ -121,8 +128,15 @@ export default class Presentation extends React.Component {
           </Heading>
           <Appear>
             <Text margin="10px 0 0" textColor="tertiary">
-              Het verschil met een regulier CMS is dat er geen front-end wordt
-              gegenereerd, er valt dus niet direct een site mee te bezoeken.
+              Het verschil met een regulier CMS is dat er niet direct een
+              website wordt getoond.
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="10px 0 0" textColor="tertiary">
+              Een Headless CMS geeft alleen de mogelijkheid om content te
+              definieren en deze content beschikbaar te stellen voor externe
+              applicaties.
             </Text>
           </Appear>
         </Slide>
@@ -154,7 +168,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <Appear>
             <Text margin="10px 0 0" textColor="tertiary">
-              CMS + API + Static site generator = Site
+              CMS + API + Static site generator = <br />Website!
             </Text>
           </Appear>
         </Slide>
@@ -179,7 +193,7 @@ export default class Presentation extends React.Component {
           <Appear>
             <List margin="10px 0 0" textColor="tertiary">
               <ListItem>Gespecialiseerde systemen</ListItem>
-              <ListItem>Architectureel separation of concerns</ListItem>
+              <ListItem>Scheiding van verantwoordelijkheden</ListItem>
               <ListItem>Meer flexibiliteit in development</ListItem>
               <ListItem>Schaalbaarheid systemen</ListItem>
             </List>
@@ -195,8 +209,8 @@ export default class Presentation extends React.Component {
           <Appear>
             <List margin="10px 0 0" textColor="tertiary">
               <ListItem>Meest geschikte systeem inzetten voor klant</ListItem>
-              <ListItem>Gelijktijd content vullen + dev</ListItem>
-              <ListItem>Gefocust op 'pure' content ipv 1 platform</ListItem>
+              <ListItem>Gelijktijdig content vullen + doorontwikkelen</ListItem>
+              <ListItem>Pure focus op de content ipv een platform</ListItem>
             </List>
           </Appear>
         </Slide>
@@ -204,10 +218,9 @@ export default class Presentation extends React.Component {
           notes={
             <ul>
               <li>
-                Meer onderdelen die we moeten inregelen (deployment, hosting,
-                cms, build, search, etc.)
+                Meer onderdelen die we moeten inregelen (deployment, build,
+                hosting, CMS, search, etc.)
               </li>
-              <li>Geen hierarchische structuur, pagina's, url's, etc.</li>
               <li>Geen hierarchische structuur, pagina's, url's, etc.</li>
             </ul>
           }
@@ -219,9 +232,17 @@ export default class Presentation extends React.Component {
             <List margin="10px 0 0" textColor="tertiary">
               <ListItem>Meer 'moving parts'</ListItem>
               <ListItem>Niet gebaseerd op pagina's</ListItem>
-              <ListItem>Marketers mogelijk meer ondersteuning nodig</ListItem>
+              <ListItem>Marketers mogelijk initieel meer ondersteunen</ListItem>
             </List>
           </Appear>
+        </Slide>
+        <Slide>
+          <Heading size={2} fit lineHeight={1} textColor="secondary">
+            Hoe werken we met de API?
+          </Heading>
+          <Text margin="10px 0 0" textColor="tertiary">
+            Meest voorkomende smaken zijn REST API's, of een GraphQL endpoint.
+          </Text>
         </Slide>
       </Deck>
     );
