@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>🍓 JAMStack 🍓 - Moderne front-ends met static sites</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>
+					Going headless without losing your head 🐔
+				</h1>
+				<p>Modern front-ends with the JAMStack</p>
+			</section>
+			<section>
+				<h2>Introduction</h2>
+				<p>Hi! I'm Iain 👋</p>
+				<p>🐦 <em>@iain_vdw</em></p>
+			</section>
+			<section>
+				<h2>What I'm gonna be jabbering about
+					<br/>
+					<span class="fragment">🍓 <em>JAMStack</em> 🍓</span>
+				</h2>
+			</section>
+			<section>
+				<h2>What is JAMStack?</h2>
+				<blockquote class="fragment">
+					<p>
+						"A modern web development architecture based on client-side <em>J</em>avaScript, reusable <em>A</em>PIs, and prebuilt <em>M</em>arkup."
+					</p>
+					<cite><small>Mathias Biilman, CEO of Netlify</small></cite>
+				</blockquote>
+			</section>
+			<section>
+				<h2>The three pillars</h2>
+				<ul>
+					<li class="fragment">JavaScript
+						<span class="fragment">
+							<em>(code)</em>
+						</span>
+					</li>
+					<li class="fragment">API's
+						<span class="fragment">
+							<em>(content)</em>
+						</span>
+					</li>
+					<li class="fragment">Markup
+						<span class="fragment">
+							<em>(templates)</em>
+						</span>
+					</li>
+				</ul>
+				<p class="fragment">This results in a <em>static site</em></p>
+			</section>
+			<section>
+				<h2>Static sites are:</h2>
+				<ul>
+					<li class="fragment">
+						<em>Fast</em>
+						<br/>
+						<span class="fragment">
+							<small>Sites prebuilt into simple, static files</small>
+						</span>
+					</li>
+					<li class="fragment">
+						<em>Safe</em>
+						<br/>
+						<span class="fragment">
+							<small>No direct requests to a server/database by the user</small>
+						</span>
+					</li>
+					<li class="fragment">
+						<em>Scalable</em>
+						<br/>
+						<span class="fragment">
+							<small>Hosting for static files is simple to setup and very scalable</small>
+						</span>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Static? Waaaiiit...</h2>
+				<p class="fragment">Aren't websites supposed to be <em>dynamic</em>?</p>
+				<p class="fragment">With a CMS?</p>
+				<p class="fragment">Frameworks?</p>
+				<p class="fragment">API's?</p>
+			</section>
+			<section>
+				<h2>Dynamic?</h2>
+				<p>
+					Content is editable, so it's dynamic<em class="fragment">?</em>
+				</p>
+				<p class="fragment">Is it?</p>
+			</section>
+			<section>
+				<h2>Content:</h2>
+				<ul>
+					<li class="fragment">Is managed in a CMS</li>
+					<li class="fragment">Is static between changes</li>
+					<li class="fragment">Time between updates can be long</li>
+				</ul>
+			</section>
+			<section>
+				<h2>
+					So why would you still need
+					<br/>
+					<span class="fragment">
+						<em>a CMS</em>
+					</span>
+					<span class="fragment">
+						or <em>framework</em>
+					</span>
+					<br/>
+					<span class="fragment">
+						with a
+						<em>database</em>
+						handling 
+						<br/> requests for content?
+					</span>
+				</h2>
+			</section>
+			<section>
+				<h2>Enter 🍓 JAMStack 🍓</h2>
+				<p>What does JAMStack solve in these situations?</p>
+				<ul>
+					<li class="fragment">
+						<em>No overhead</em> running a CMS / framework</li>
+					<li class="fragment">
+						<em>Reduced complexity</em> of hosting and server</li>
+					<li class="fragment">
+						<em>No laggyness</em> caused by heavy APIs/CMSes</li>
+					<li class="fragment">
+						<em>Improved security</em> of static files</li>
+					<li class="fragment">
+						<em>More freedom</em> with decoupled front-ends</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>Files worden gegenereerd bij deployment</li>
+						<li>Elke hosting die een bak bestanden kan serveren is voldoende</li>
+						<li>Bezoeker heeft geen last van externe services omdat deze aangesproken worden bij deployment</li>
+						<li>Omdat er geen CMS of framework bij een request aan te pas komt, zijn er ook veel minder/geen aanvalshoeken</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>But wait, there's more!</h2>
+				<p class="fragment">This stuff gets way easier:</p>
+				<p>
+					<em class="fragment">Global CDN,</em>
+					<em class="fragment">Caching,</em>
+					<em class="fragment">Cache invalidation,</em>
+					<br/>
+					<em class="fragment">Atomic deploys,</em>
+					<em class="fragment">Incremental builds,</em>
+					<em class="fragment">Rollbacks,</em>
+					<br/>
+					<em class="fragment">Continuous deployment,</em>
+					<em class="fragment">Command line deployment,</em>
+					<br/>
+					<em class="fragment">Critical rendering,</em>
+					<em class="fragment">Asset optimization,</em>
+					<em class="fragment">etc.</em>
+				</p>
+			</section>
+			<section>
+				<h2>
+					What is this <em>very</em> suited for?
+				</h2>
+				<ul>
+					<li class="fragment">Sites with a lot of content</li>
+					<li class="fragment">Content from existing APIs</li>
+					<li class="fragment">Really high performance requirements</li>
+				</ul>
+			</section>
+			<section>
+				<h2>
+					What is it <em>less</em> suited for?
+				</h2>
+				<ul>
+					<li class="fragment">Real-time / user-specific data</li>
+					<li class="fragment">Webshops</li>
+					<li class="fragment">Form handling</li>
+					<li class="fragment">Search</li>
+				</ul>
+				<p>
+					<small class="fragment">But
+						<em>not</em> impossible...</small>
+				</p>
+			</section>
+			<section>
+				<h2>Solutions</h2>
+				<ul>
+					<li class="fragment">
+						<em>Single Page Apps</em>
+						<br/>
+						<small>React, Angular, Vue</small>
+					</li>
+					<li class="fragment">
+						<em>Payment &amp; Shopping cart services</em>
+						<br/>
+						<small>Shopify, Stripe</small>
+					</li>
+					<li class="fragment">
+						<em>Form services</em>
+						<br/>
+						<small>Wufoo, TypeForm, Netlify Forms</small>
+					</li>
+					<li class="fragment">
+						<em>Search services</em>
+						<br/>
+						<small>Google Search, Amazon Search, Algolia</small>
+					</li>
+					<li class="fragment">
+						<em>Authentication services</em>
+						<br/>
+						<small>Auth0, OAuth, Netlify Identity</small>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>So how would we realize this?</h2>
+				<ul>
+					<li class="fragment">Set up a CMS / framework with an API</li>
+					<li class="fragment">Static site generator that consumes that API</li>
+					<li class="fragment">Hosting for simple static files</li>
+					<li class="fragment">Deployment which builds the site</li>
+					<li class="fragment">Global CDN for superfast worldwide availability</li>
+				</ul>
+			</section>
+			<section>
+				<h2>What can we use for this?</h2>
+				<p>
+					<em>Static site generators</em>
+				</p>
+				<ul>
+					<li class="fragment">Jekyll (Ruby)</li>
+					<li class="fragment">Hugo (Go)</li>
+					<li class="fragment"><em>Gatsby (Node.js, React)</em></li>
+				</ul>
+			</section>
+			<section>
+				<h2>What can we use for this?</h2>
+				<p>
+					<em>Headless CMS</em>
+				</p>
+				<ul>
+					<li class="fragment">Headless Drupal / WordPress</li>
+					<li class="fragment">Contentful</li>
+					<li class="fragment">GraphCMS</li>
+					<li class="fragment"><em>Netlify CMS</em></li>
+				</ul>
+			</section>
+			<section>
+				<h2>What can we use for this?</h2>
+				<p>
+					<em>Hosting / deployment</em>
+				</p>
+				<ul>
+					<li class="fragment">Amazon AWS</li>
+					<li class="fragment">Google Cloud Storage</li>
+					<li class="fragment">Surge.sh</li>
+					<li class="fragment">Zeit.co</li>
+					<li class="fragment"><em>Netlify</em></li>
+				</ul>
+			</section>
+			<section>
+				<h2>Dus...</h2>
+				<p class="fragment">
+					<em>Ontkoppel</em> de front-end met
+					<em>JAMStack</em> om met code, API's en content
+					<em>snelle en veilige websites</em> te bouwen.
+				</p>
+			</section>
+			<section>
+				<h2>What are your questions?</h2>
+				<p class="fragment">Ok bye. 👋</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			progress: true,
+			history: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
