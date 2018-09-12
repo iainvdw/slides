@@ -14,13 +14,13 @@
 	<link rel="stylesheet" href="lib/css/zenburn.css">
 
 	<!-- Printing and PDF exports -->
-	<script>
+	<!-- <script>
 		var link = document.createElement('link');
 		link.rel = 'stylesheet';
 		link.type = 'text/css';
 		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
-	</script>
+	</script> -->
 </head>
 
 <body>
@@ -40,11 +40,146 @@
 			<section>
 				<h2>What I'm gonna be jabbering about
 					<br/>
+					<span class="fragment">🐔 <em>Headless CMS</em> 🐔</span>
+					<br/>
 					<span class="fragment">🍓 <em>JAMStack</em> 🍓</span>
 				</h2>
 			</section>
 			<section>
-				<h2>What is JAMStack?</h2>
+				<h2>What is a headless CMS?</h2>
+				<p>A CMS where the presentation (head) is decoupled from the data layer (body).
+			</section>
+			<section>
+				<h2>Differences to traditional CMSes</h2>
+				<ul>
+					<li>
+						Does not "render" any content or pages itself
+					</li>
+					<li>
+						Exposes the content via an API (REST, GraphQL, JSON)
+					</li>
+					<li>
+						Tends to have more focus on the authoring experience
+					</li>
+					<li>
+						Often is cloud-based (CMS-as-a-service, Content-as-a-service)
+					</li>
+					<li>
+						Stores content in a "pure" format, decoupled from a web context
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Why choose headless?</h2>
+				<ul>
+					<li>
+						No sole focus on web content
+					</li>
+					<li>
+						Teams can start instantly, work together simultaneously
+					</li>
+					<li>
+						Front-end devs can pick perfect exactly what's needed
+					</li>
+					<li>
+						Fits right into a microservices architecture
+					</li>
+					<li>
+						Can be used as one of many sources of content
+					</li>
+					<li>
+						Flexibility, freedom, ease of setup
+					</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>Not limited by web page content (social media, mobile apps, flight information, entertainment, sports, etc.)</li>
+						<li>FE, BE, author teams can work cooperatively to incrementally work on new features.</li>
+						<li>They can use preferred technologies instead of having to learn CMS internals.</li>
+						<li>Everything is decoupled and can be linked with an API.</li>
+						<li>There's no restriction to web-like content or data. Can be any content, any CMS, etc.</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>Why <em>not</em> choose headless?</h2>
+				<ul>
+					<li>
+						Lack of focus on web-like features
+					</li>
+					<li>
+						Some projects may contain a lot of "moving parts"
+					</li>
+					<li>
+						Content editing is not WYSIWYG
+					</li>
+					<li>
+						Marketers may need more developer assistance 
+					</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>SEO, page architecture, asset linking. Makes some features more challenging</li>
+						<li>for certain features, like security, link management, asset management, search, e-commerce, etc.</li>
+						<li>as content is primitive and has no immediate preview front-end</li>
+						<li>for creating page layouts and customer journeys on a website</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>When choose a headless CMS?</h2>
+				<ul>
+					<li>
+						Smaller short-lived projects low-stake marketing websites
+					</li>
+					<li>
+						Large projects with multi-channel content
+					</li>
+					<li>
+						Organizations with microservices-oriented architecture
+					</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>low-stake marketing websites</li>
+						<li>where the content is not web-only (social media, apps, websites, information systems)</li>
+						<li>that need a CMS service</li>
+					</ul>
+				</aside>
+			</section>
+			<section>
+				<h2>CMS options</h2>
+				<ul>
+					<li class="fragment">
+						<em>Traditional CMSes with extension</em>
+						<br/>
+						<span class="fragment">
+							<small>WordPress REST API, Drupal REST API or GraphQL module </small>
+						</span>
+					</li>
+					<li class="fragment">
+						<em>CMSaaS</em>
+						<br/>
+						<span class="fragment">
+							<small>Contentful, GraphCMS, Prismic</small>
+						</span>
+					</li>
+					<li class="fragment">
+						<em>File-based CMS</em>
+						<br/>
+						<span class="fragment">
+							<small>Netlify CMS</small>
+						</span>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>But what about <em>the head?!</em></h2>
+				<p class="fragment">Let's put a head on this content...</p>
+				<p class="fragment"><em>How?</em></p>
+			</section>
+			<section>
+				<h2>JAMStack</h2>
 				<blockquote class="fragment">
 					<p>
 						"A modern web development architecture based on client-side <em>J</em>avaScript, reusable <em>A</em>PIs, and prebuilt <em>M</em>arkup."
@@ -84,7 +219,7 @@
 						</span>
 					</li>
 					<li class="fragment">
-						<em>Safe</em>
+						<em>Secure</em>
 						<br/>
 						<span class="fragment">
 							<small>No direct requests to a server/database by the user</small>
@@ -267,9 +402,9 @@
 				</p>
 				<ul>
 					<li class="fragment">Headless Drupal / WordPress</li>
-					<li class="fragment">Contentful</li>
+					<li class="fragment">Netlify CMS</li>
 					<li class="fragment">GraphCMS</li>
-					<li class="fragment"><em>Netlify CMS</em></li>
+					<li class="fragment"><em>Contentful</em></li>
 				</ul>
 			</section>
 			<section>
@@ -287,7 +422,7 @@
 			</section>
 			<section>
 				<h2>Applying this architecture</h2>
-				<p><em>Gatsby, Netlify CMS and Netlify</em></p>
+				<p><em>Gatsby, Contentful and Netlify</em></p>
 			</section>
 			<section>
 				<h2>Gatsby</h2>
