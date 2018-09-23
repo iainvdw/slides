@@ -48,6 +48,11 @@
 			<section>
 				<h2>Brief intro</h2>
 				<p>My experience with web development...</p>
+				<aside class="notes">
+					<p>Past 10 years developing websites.</p>
+					<p>In various CMSes.</p>
+					<p>All with their features and quirks.</p>
+				</aside>
 			</section>
 			<section>
 				<h2>Traditional CMSes</h2>
@@ -57,11 +62,11 @@
 					<li>Enter content in CMS</li>
 					<li>Build front-end for CMS</li>
 					<li>Set up hosting for CMS</li>
-					<li>Upload/deploy CMS</li>
+					<li>Deploy CMS</li>
 				</ol>
 			</section>
 			<section>
-				<h2>Everything was <em>tightly coupled</em></h2>
+				<h2>Everything is <em>tightly coupled</em></h2>
 			</section>
 			<section data-background-video="img/meh.mp4"  data-background-video-loop>
 				<h2>Meh.</h2>
@@ -69,88 +74,85 @@
 			<section>
 				<h2>But then...</h2>
 				<p class="fragment"><em>Netlify</em></p>
+				<aside class="notes">I came across Netlify. Started playing around, moving my site to that as host, checking its features. Amazing!</aside>
 			</section>
 			<section>
 				<h2>Netlify</h2>
-				<p>Continuous Integration/Deployment, Hosting, HTTPS, CDN, etc. <small class="fragment">(for free!)</small></p>
+				<p>Continuous Integration/Deployment, Hosting, HTTPS, CDN, Forms, Authentication and more. <small class="fragment"><em>(for free!)</em></small></p>
 				<p class="fragment">But... <em class="fragment">It can only host static files.</em></p>
 			</section>
 			<section>
-				<h2>Static websites</h2>
-				<p>Pre-built, static HTML pages, that have been supplied content during a build step.</p>
+				<h2>Static files? And a CMS? 🤔</h2>
+				<p>That does not sound ideal, does it?</p>
+				<p class="fragment"><em>More on that later...</em></p>
+			</section>
+			<section data-background-image="img/suspense.gif">
+				<h2>The suspense!</h2>
 			</section>
 			<section>
-				<h2>Static site generators</h2>
-				<p>Tools that build static websites from a content source and templates.</p>
+				<h2>But first...</h2>
+				<p>A detour into <em>headless CMSes</em></p>
 			</section>
 			<section>
-				<h2>Gatsby</h2>
-				<p>Gatsby is a <em>static site generator</em>, built with <em>React</em>, that takes content sources, transforms it into a <em>static GraphQL endpoint</em>, which you can use to fetch data into your templates.</p>
-			</section>
-			<section>
-				<h2>What is GraphQL?</h2>
-				<p>In short, GraphQL is a <em>query language</em> with which you can fetch data from <em>a single endpoint</em>, specifying your <em>data query</em> and receiving a JSON response in the <em>same shape</em> of the query.</p>
-			</section>
-
-
-
-
-
-
-
-
-
-			<section>
-				<h2>What is a headless CMS?</h2>
+				<h2>What is a <em>headless CMS</em>?</h2>
 				<p>A CMS where the presentation (head) is decoupled from the data layer (body).
 			</section>
 			<section>
-				<h2>Differences to traditional CMSes</h2>
+				<h2><em>Differences</em> to traditional CMSes</h2>
 				<ul>
-					<li>
-						Does not "render" any content or pages itself
+					<li class="fragment">
+						Does <em>not render pages</em>
 					</li>
-					<li>
-						Exposes the content via an API (REST, GraphQL, JSON)
+					<li class="fragment">
+						Exposes the content <em>via an API</em>
 					</li>
-					<li>
-						Tends to have more focus on the authoring experience
+					<li class="fragment">
+						Focuses on the <em>authoring experience</em>
 					</li>
-					<li>
-						Often is cloud-based (CMS-as-a-service, Content-as-a-service)
+					<li class="fragment">
+						Often is <em>cloud-based</em>
 					</li>
-					<li>
-						Stores content in a "pure" format, decoupled from a web context
+					<li class="fragment">
+						Stores content in a <em>"pure" form</em>
 					</li>
 				</ul>
+				<aside class="notes">
+					<ul>
+						<li>No content, no pages, not immediately accessible in a browser.</li>
+						<li>APIs can be queried for content.</li>
+						<li>Sole focus is on the authors/editors.</li>
+						<li>CMS-as-a-service, Content-as-a-service</li>
+						<li>Decoupled from a web context, no URLs, no metadata.</li>
+					</ul>
+				</aside>
 			</section>
 			<section>
 				<h2>Why choose headless?</h2>
 				<ul>
-					<li>
-						No sole focus on web content
+					<li class="fragment">
+						<em>Broader focus</em> than web content
 					</li>
-					<li>
-						Teams can start instantly, work together simultaneously
+					<li class="fragment">
+						Teams can <em>work together from the start</em>
 					</li>
-					<li>
-						Front-end devs can pick perfect exactly what's needed
+					<li class="fragment">
+						<em>Pick the best tools</em> for your frontend
 					</li>
-					<li>
-						Fits right into a microservices architecture
+					<li class="fragment">
+						Superb fit for a <em>microservices architecture</em>
 					</li>
-					<li>
-						Can be used as one of many sources of content
+					<li class="fragment">
+						<em>One of many sources</em> of content
 					</li>
-					<li>
-						Flexibility, freedom, ease of setup
+					<li class="fragment">
+						Flexibility, ease of setup, <em>freedom</em>
 					</li>
 				</ul>
 				<aside class="notes">
 					<ul>
 						<li>Not limited by web page content (social media, mobile apps, flight information, entertainment, sports, etc.)</li>
-						<li>FE, BE, author teams can work cooperatively to incrementally work on new features.</li>
-						<li>They can use preferred technologies instead of having to learn CMS internals.</li>
+						<li>FE, BE, content creation teams can work cooperatively to incrementally work on new features.</li>
+						<li>You can use preferred technologies instead of having to learn internals of every CMS.</li>
 						<li>Everything is decoupled and can be linked with an API.</li>
 						<li>There's no restriction to web-like content or data. Can be any content, any CMS, etc.</li>
 					</ul>
@@ -159,17 +161,17 @@
 			<section>
 				<h2>Why <em>not</em> choose headless?</h2>
 				<ul>
-					<li>
+					<li class="fragment">
 						Lack of focus on web-like features
 					</li>
-					<li>
-						Some projects may contain a lot of "moving parts"
+					<li class="fragment">
+						Sometimes a lot of "moving parts"
 					</li>
-					<li>
+					<li class="fragment">
 						Content editing is not WYSIWYG
 					</li>
-					<li>
-						Marketers may need more developer assistance 
+					<li class="fragment">
+						More dev assistance may be needed
 					</li>
 				</ul>
 				<aside class="notes">
@@ -182,16 +184,19 @@
 				</aside>
 			</section>
 			<section>
-				<h2>When choose a headless CMS?</h2>
+				<h2>When to choose a headless CMS?</h2>
 				<ul>
-					<li>
-						Smaller short-lived projects low-stake marketing websites
+					<li class="fragment">
+						Smaller short-lived projects 
 					</li>
-					<li>
-						Large projects with multi-channel content
+					<li class="fragment">
+						Low-stake marketing websites
 					</li>
-					<li>
-						Organizations with microservices-oriented architecture
+					<li class="fragment">
+						Projects with multi-channel content
+					</li>
+					<li class="fragment">
+						Microservices-oriented architecture
 					</li>
 				</ul>
 				<aside class="notes">
@@ -234,7 +239,7 @@
 				<p class="fragment"><em>How?</em></p>
 			</section>
 			<section>
-				<h2>JAMStack</h2>
+				<h2>🍓 JAMStack 🍓</h2>
 				<blockquote class="fragment">
 					<p>
 						"A modern web development architecture based on client-side <em>J</em>avaScript, reusable <em>A</em>PIs, and prebuilt <em>M</em>arkup."
@@ -262,6 +267,10 @@
 					</li>
 				</ul>
 				<p class="fragment">This results in a <em>static site</em></p>
+			</section>
+			<section>
+				<h2>Static sites</h2>
+				<p>Pre-built, static HTML pages, that have been supplied content during a build step.</p>
 			</section>
 			<section>
 				<h2>Static sites are:</h2>
@@ -292,9 +301,9 @@
 			<section>
 				<h2>Static? Waaaiiit...</h2>
 				<p class="fragment">Aren't websites supposed to be <em>dynamic</em>?</p>
-				<p class="fragment">With a CMS?</p>
-				<p class="fragment">Frameworks?</p>
-				<p class="fragment">API's?</p>
+				<p class="fragment">With a <em>CMS</em>?</p>
+				<p class="fragment">Or <em>frameworks</em>?</p>
+				<p class="fragment">And <em>APIs</em>?</p>
 			</section>
 			<section>
 				<h2>Dynamic?</h2>
@@ -331,8 +340,7 @@
 				</h2>
 			</section>
 			<section>
-				<h2>Enter 🍓 JAMStack 🍓</h2>
-				<p>What does JAMStack solve in these situations?</p>
+				<h2>What does JAMStack solve?</h2>
 				<ul>
 					<li class="fragment">
 						<em>No overhead</em> running a CMS / framework</li>
@@ -475,10 +483,106 @@
 					<li class="fragment"><em>Netlify</em></li>
 				</ul>
 			</section>
+
+
+
+
+
+
 			<section>
 				<h2>Applying this architecture</h2>
-				<p><em>Gatsby, Contentful and Netlify</em></p>
+				<p><em>Netlify, Contentful and Gatsby</em></p>
 			</section>
+
+			<section>
+				<h2><em>Netlify</em></h2>
+				<p>Create a new site on Netlify</p>
+			</section>
+			<section>
+				<h2>Create site</h2>
+				<img src="img/netlify-create-site.png" width="500" alt="" style="vertical-align: middle;">
+			</section>
+			<section>
+				<h2>Link repository</h2>
+				<img src="img/netlify-link-repo.png" width="500" alt="" style="vertical-align: middle;">
+			</section>
+			<section>
+				<h2>Deploy settings</h2>
+				<img src="img/netlify-deploy-settings.png" width="500" alt="" style="vertical-align: middle;">
+			</section>
+
+			
+			<section>
+				<h2><em>Contentful</em></h2>
+				<p>A developer-friendly CMS-as-a-service.<br/>Flexible and powerful.</p>
+			</section>
+			<section>
+				<h2>Contentful features</h2>
+				<ul>
+					<li class="fragment">Content authoring</li>
+					<li class="fragment">Versioning</li>
+					<li class="fragment">Localization</li>
+					<li class="fragment">Webhooks</li>
+					<li class="fragment">REST + GraphQL APIs</li>
+					<li class="fragment">SDKs</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Content models</h2>
+				<img src="img/contentful-model.png" width="500" alt="" style="vertical-align: middle;">
+				<img src="img/contentful-fields.png" width="400" alt="" style="vertical-align: middle;">
+			</section>
+			<section>
+				<h2>API</h2>
+				<pre><code class="js">{
+  "fields": {
+    "title": "This is the article title",
+    "slug": "article-slug-1234",
+    "content": "## Well, hello there!\n\n
+                This is my first test article that 
+                I've published using Contentful, 
+                Gatsby and Netlify.",
+    "header": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Asset",
+        "id": "2Tk8wt5wjmI64yo88IYO24"
+      }
+    }
+  }
+}</code></pre>
+			</section>
+			<section>
+				<h2>Webhooks</h2>
+				<p>Trigger an action on a different service, when something happens.</p>
+				<p class="fragment"><em>Like publishing content.</em></p>
+			</section>
+			<section>
+				<h2>Webhooks</h2>
+				<img src="img/contentful-webhook.png" width="700" alt="" style="vertical-align: middle;">
+			</section>
+
+
+
+			<section>
+				<h2>Static site generators</h2>
+				<p>Tools that build static websites from a content source and templates.</p>
+			</section>
+			<section>
+				<h2>Gatsby</h2>
+				<p>Gatsby is a <em>static site generator</em>, built with <em>React</em>, that takes content sources, transforms it into a <em>static GraphQL endpoint</em>, which you can use to fetch data into your templates.</p>
+			</section>
+			<section data-background-image="img/gatsby.gif">
+			</section>
+			<section>
+				<h2>What is GraphQL?</h2>
+				<p>In short, GraphQL is a <em>query language</em> with which you can fetch data from <em>a single endpoint</em>, specifying your <em>data query</em> and receiving a JSON response in the <em>same shape</em> of the query.</p>
+			</section>
+
+
+
+
+
 			<section>
 				<h2>So...</h2>
 				<p class="fragment">
