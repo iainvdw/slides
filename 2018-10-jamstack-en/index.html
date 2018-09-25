@@ -47,11 +47,12 @@
             </section>
             <section>
                 <h2>Brief intro</h2>
-                <p>My experience with web development...</p>
+                <p>My experience with website development...</p>
                 <aside class="notes">
                     <p>Past 10 years developing websites.</p>
                     <p>In various CMSes.</p>
                     <p>All with their features and quirks.</p>
+                    <p>Have to learn CMS internals every so often.</p>
                 </aside>
             </section>
             <section>
@@ -130,7 +131,7 @@
                 <h2>Why choose headless?</h2>
                 <ul>
                     <li class="fragment">
-                        <em>Broader focus</em> than web content
+                        <em>Broader focus</em> than website content
                     </li>
                     <li class="fragment">
                         Teams can <em>work together from the start</em>
@@ -142,18 +143,15 @@
                         Superb fit for a <em>microservices architecture</em>
                     </li>
                     <li class="fragment">
-                        <em>One of many sources</em> of content
-                    </li>
-                    <li class="fragment">
                         Flexibility, ease of setup, <em>freedom</em>
                     </li>
                 </ul>
                 <aside class="notes">
                     <ul>
-                        <li>Not limited by web page content (social media, mobile apps, flight information, entertainment, sports, etc.)</li>
+                        <li>Not limited by website content (social media, mobile apps, flight information, entertainment or sports channels, etc.)</li>
                         <li>FE, BE, content creation teams can work cooperatively to incrementally work on new features.</li>
                         <li>You can use preferred technologies instead of having to learn internals of every CMS.</li>
-                        <li>Everything is decoupled and can be linked with an API.</li>
+                        <li>One of many sources of content. Everything is decoupled and can be linked with an API.</li>
                         <li>There's no restriction to web-like content or data. Can be any content, any CMS, etc.</li>
                     </ul>
                 </aside>
@@ -190,9 +188,6 @@
                         Smaller short-lived projects 
                     </li>
                     <li class="fragment">
-                        Low-stake marketing websites
-                    </li>
-                    <li class="fragment">
                         Projects with multi-channel content
                     </li>
                     <li class="fragment">
@@ -203,7 +198,7 @@
                     <ul>
                         <li>low-stake marketing websites</li>
                         <li>where the content is not web-only (social media, apps, websites, information systems)</li>
-                        <li>that need a CMS service</li>
+                        <li>An additional service in a microservices architecture to manage extra types of content</li>
                     </ul>
                 </aside>
             </section>
@@ -273,37 +268,16 @@
                 <p>Pre-built, static HTML pages, that have been supplied content during a build step.</p>
             </section>
             <section>
-                <h2>Static sites are:</h2>
-                <ul>
-                    <li class="fragment">
-                        <em>Fast</em>
-                        <br/>
-                        <span class="fragment">
-                            <small>Sites prebuilt into simple, static files</small>
-                        </span>
-                    </li>
-                    <li class="fragment">
-                        <em>Secure</em>
-                        <br/>
-                        <span class="fragment">
-                            <small>No direct requests to a server/database by the user</small>
-                        </span>
-                    </li>
-                    <li class="fragment">
-                        <em>Scalable</em>
-                        <br/>
-                        <span class="fragment">
-                            <small>Hosting for static files is simple to setup and very scalable</small>
-                        </span>
-                    </li>
-                </ul>
+                <h2>Static site generators</h2>
+                <p>Tools that build static websites from a content source and templates.</p>
             </section>
+
             <section>
                 <h2>Static? Waaaiiit...</h2>
                 <p class="fragment">Aren't websites supposed to be <em>dynamic</em>?</p>
-                <p class="fragment">With a <em>CMS</em>?</p>
-                <p class="fragment">Or <em>frameworks</em>?</p>
-                <p class="fragment">And <em>APIs</em>?</p>
+                <p class="fragment">Running a <em>CMS</em>?</p>
+                <p class="fragment">To <em>edit content</em>?</p>
+                <p class="fragment">And <em>present pages</em>?</p>
             </section>
             <section>
                 <h2>Dynamic?</h2>
@@ -326,43 +300,52 @@
                     <br/>
                     <span class="fragment">
                         <em>a CMS</em>
-                    </span>
-                    <span class="fragment">
                         or <em>framework</em>
                     </span>
                     <br/>
                     <span class="fragment">
-                        with a
-                        <em>database</em>
-                        handling 
-                        <br/> requests for content?
+                        requesting 
+                        <br>
+                        <em>the same content over and over</em>
+                        <br>
+                        from a database?
                     </span>
                 </h2>
             </section>
             <section>
-                <h2>What does JAMStack solve?</h2>
+                <h2>Static sites are:</h2>
                 <ul>
-                    <li class="fragment">
-                        <em>No overhead</em> running a CMS / framework</li>
-                    <li class="fragment">
-                        <em>Reduced complexity</em> of hosting and server</li>
-                    <li class="fragment">
-                        <em>No laggyness</em> caused by heavy APIs/CMSes</li>
-                    <li class="fragment">
-                        <em>Improved security</em> of static files</li>
-                    <li class="fragment">
-                        <em>More freedom</em> with decoupled front-ends</li>
+                    <li class="fragment" style="line-height: 1; margin-bottom: .33em;">
+                        <em>Faster</em>
+                        <br/>
+                        <small class="fragment">Sites prebuilt into simple, static files</small>
+                    </li>
+                    <li class="fragment" style="line-height: 1; margin-bottom: .33em;">
+                        <em>More secure</em>
+                        <br/>
+                        <small class="fragment">No direct requests to a server/database by the user</small>
+                    </li>
+                    <li class="fragment" style="line-height: 1; margin-bottom: .33em;">
+                        <em>Simpler &amp; more scalable</em>
+                        <br/>
+                        <small class="fragment">Hosting for static files is simple to setup and very scalable</small>
+                    </li>
+                    <li class="fragment" style="line-height: 1; margin-bottom: .33em;">
+                        <em>Liberating</em>
+                        <br/>
+                        <small class="fragment">More freedom in choosing tools for the frontend</small>
+                    </li>
                 </ul>
                 <aside class="notes">
+                    <p>Static sites solve this exact "issue"</p>
                     <ul>
-                        <li>Files worden gegenereerd bij deployment</li>
-                        <li>Elke hosting die een bak bestanden kan serveren is voldoende</li>
-                        <li>Bezoeker heeft geen last van externe services omdat deze aangesproken worden bij deployment</li>
-                        <li>Omdat er geen CMS of framework bij een request aan te pas komt, zijn er ook veel minder/geen aanvalshoeken</li>
+                        <li>Files are generated on deployment. Visitor is not affected by slow external services as they're only used during deployment</li>
+                        <li>As there's no CMS/framework being used during a request, there are way fewer attack vectors.</li>
+                        <li>Every host that can handle simple files (all of them!) is sufficient</li>
+                        <li>Static sites can be built exactly the way you want, without limitations of a certain CMS.</li>
                     </ul>
                 </aside>
-            </section>
-            <section>
+            </section>            <section>
                 <h2>But wait, there's more!</h2>
                 <p class="fragment">This stuff gets way easier:</p>
                 <p>
@@ -382,6 +365,7 @@
                     <em class="fragment">etc.</em>
                 </p>
             </section>
+            <!--
             <section>
                 <h2>
                     What is this <em>very</em> suited for?
@@ -392,6 +376,7 @@
                     <li class="fragment">Really high performance requirements</li>
                 </ul>
             </section>
+            -->
             <section>
                 <h2>
                     What is it <em>less</em> suited for?
@@ -402,9 +387,9 @@
                     <li class="fragment">Form handling</li>
                     <li class="fragment">Search</li>
                 </ul>
-                <p>
-                    <small class="fragment">But
-                        <em>not</em> impossible...</small>
+                <p class="fragment">
+                    But it's
+                        <em>not impossible</em>...
                 </p>
             </section>
             <section>
@@ -428,7 +413,7 @@
                     <li class="fragment">
                         <em>Search services</em>
                         <br/>
-                        <small>Google Search, Amazon Search, Algolia</small>
+                        <small>Google Search, Amazon Search, Algolia, ElasticSearch</small>
                     </li>
                     <li class="fragment">
                         <em>Authentication services</em>
@@ -440,13 +425,14 @@
             <section>
                 <h2>So how would we realize this?</h2>
                 <ul>
-                    <li class="fragment">Set up a CMS / framework with an API</li>
+                    <li class="fragment">Set up a headless CMS with an API</li>
                     <li class="fragment">Static site generator that consumes that API</li>
                     <li class="fragment">Hosting for simple static files</li>
                     <li class="fragment">Deployment which builds the site</li>
                     <li class="fragment">Global CDN for superfast worldwide availability</li>
                 </ul>
             </section>
+            <!--
             <section>
                 <h2>What can we use for this?</h2>
                 <p>
@@ -483,7 +469,7 @@
                     <li class="fragment"><em>Netlify</em></li>
                 </ul>
             </section>
-
+            -->
 
 
             <section>
@@ -507,6 +493,10 @@
                 <h2>Deploy settings</h2>
                 <img src="img/netlify-deploy-settings.png" width="500" alt="" style="vertical-align: middle;">
             </section>
+            <section>
+                <h2>💥 Boom. 💥</h2>
+                <p>You have a site.</p>
+            </section>
 
 
             
@@ -522,7 +512,7 @@
                     <li class="fragment">Localization</li>
                     <li class="fragment">Webhooks</li>
                     <li class="fragment">REST + GraphQL APIs</li>
-                    <li class="fragment">SDKs</li>
+                    <li class="fragment">SDKs for popular languages</li>
                 </ul>
             </section>
             <section>
@@ -563,18 +553,14 @@
 
 
             <section>
-                <h2>Static site generators</h2>
-                <p>Tools that build static websites from a content source and templates.</p>
-            </section>
-            <section>
-                <h2>Gatsby</h2>
+                <h2><em>Gatsby</em></h2>
                 <p>Gatsby is a <em>static site generator</em>, built with <em>React</em>, that takes a content source, transforms it into a <em>static GraphQL endpoint</em>, which you can use to fetch data into your templates.</p>
             </section>
             <section data-background-image="img/gatsby.gif">
             </section>
             <section>
                 <h2>What is GraphQL?</h2>
-                <p>In short, GraphQL is a <em>query language</em> with which you can fetch data from <em>a single endpoint</em>, specifying your <em>data query</em> and receiving a JSON response in the <em>same shape</em> of the query.</p>
+                <p>In short, GraphQL is a <em>query language</em> with which you can fetch data from <em>a single smart endpoint</em>, specifying your <em>data query</em> and receiving a JSON response in the <em>same shape</em> of the query.</p>
             </section>
             <section>
                 <h2>So how do I show my content?</h2>
@@ -609,7 +595,8 @@
             </section>
             <section>
                 <h2>Query away!</h2>
-                <pre><code>{
+                <pre><code>// graphql/all-articles.js
+module.exports = `query AllArticlesQuery {
   allContentfulArticle {
     edges {
       node {
@@ -630,17 +617,22 @@
             </section>
             <section>
                 <h2>Feed it to Gatsby</h2>
-                <pre><code>const path = require('path');
+                <pre><code>// gatsby-node.js
+const path = require('path');
 const { AllArticlesQuery } = require('./src/graphql/all-articles');
 
+// Create article pages
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
+    // Run the content query
     graphql(AllArticlesQuery).then(data) => {
+      // Extract content and/or errors from response data
       const articles = data.allContentfulArticle.edges;
       const errors = data.errors;
       
+      // Oh noes!
       if (errors) {
         reject(errors);
       }
@@ -650,30 +642,34 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         path: '/articles/',
         component: path.resolve('src/templates/article-overview.js'),
         context: {
-          articles,
+          articles, // &lt;- The actual content
         },
       });
+
+      // All done!
+      resolve();
     }
   }
 };</code></pre>
             </section>
             <section>
               <h2>Use the data as React props</h2>
-              <pre class="js"><code class="js">import React from 'react';
+              <pre class="js"><code class="js">// article-overview.js
+import React from 'react';
 import Link from 'gatsby-link';
 
 const ArticleOverview = (props) => (
-    &lt;ul&gt;
-      {props.pathContext.articles.map(({ node: { title, header, slug } }) =&gt; (
-        &lt;li&gt;
-          &lt;h2&gt;{title}&lt;/h2&gt;
-          {header && &lt;img src={header.file.url} alt={header.description} /&gt;}
-          &lt;Link to={`/articles/${slug}`}&gt;
-            Read article...
-          &lt;/Link&gt;
-        &lt;/li&gt;
-      ))}
-    &lt;/ul&gt;
+  &lt;ul&gt;
+    {props.pathContext.articles.map(({ node: { title, header, slug } }) =&gt; (
+    &lt;li&gt;
+      &lt;h2&gt;{title}&lt;/h2&gt;
+      {header && &lt;img src={header.file.url} alt={header.description} /&gt;}
+      &lt;Link to={`/articles/${slug}`}&gt;
+      Read article...
+      &lt;/Link&gt;
+    &lt;/li&gt;
+    ))}
+  &lt;/ul&gt;
 );
 
 export default ArticleOverview;</code></pre>
@@ -689,7 +685,7 @@ export default ArticleOverview;</code></pre>
                 <h2>So...</h2>
                 <p class="fragment">
                     <span class="fragment">
-                        <em>Decouple</em> your frontend with <em>JAMStack</em> 
+                        <em>Decouple</em> your frontend with <br><em>a Headless CMS and JAMStack</em> 
                         <br/>
                     </span>
                     <span class="fragment">
