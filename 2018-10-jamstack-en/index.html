@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>🍓 JAMStack 🍓 - Moderne front-ends met static sites</title>
+    <title>Going headless without losing your head 🐔</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
@@ -30,7 +30,7 @@
                 <h1>
                     Going headless without losing your head 🐔
                 </h1>
-                <p>Modern front-ends with the JAMStack</p>
+                <p>Modern front-ends with the JAM Stack</p>
             </section>
             <section>
                 <h2>Introduction</h2>
@@ -42,7 +42,7 @@
                     <br/>
                     <span class="fragment">🐔 <em>Headless CMS</em> 🐔</span>
                     <br/>
-                    <span class="fragment">🍓 <em>JAMStack</em> 🍓</span>
+                    <span class="fragment">🍓 <em>JAM Stack</em> 🍓</span>
                 </h2>
             </section>
             <section>
@@ -56,7 +56,7 @@
                 </aside>
             </section>
             <section>
-                <h2>Traditional CMSes</h2>
+                <h2>Traditional CMS</h2>
                 <ol>
                     <li>Install CMS</li>
                     <li>Model data types in CMS</li>
@@ -68,6 +68,9 @@
             </section>
             <section>
                 <h2>Everything is <em>tightly coupled</em></h2>
+                <aside class="notes">
+                    server, database, hosting, content, frontend
+                </aside>
             </section>
             <section data-background-video="img/meh.mp4"  data-background-video-loop>
                 <h2>Meh.</h2>
@@ -79,7 +82,7 @@
             </section>
             <section>
                 <h2>Netlify</h2>
-                <p>Continuous Integration/Deployment, Hosting, HTTPS, CDN, Forms, Authentication and more. <small class="fragment"><em>(for free!)</em></small></p>
+                <p>Continuous Deployment, Hosting, HTTPS, CDN, Forms, Authentication and more. <small class="fragment"><em>(for free!)</em></small></p>
                 <p class="fragment">But... <em class="fragment">It can only host static files.</em></p>
             </section>
             <section>
@@ -127,6 +130,7 @@
                     </ul>
                 </aside>
             </section>
+            <!--
             <section>
                 <h2>Why choose headless?</h2>
                 <ul>
@@ -181,6 +185,7 @@
                     </ul>
                 </aside>
             </section>
+            -->
             <section>
                 <h2>When to choose a headless CMS?</h2>
                 <ul>
@@ -216,14 +221,14 @@
                         <em>CMSaaS</em>
                         <br/>
                         <span class="fragment">
-                            <small>Contentful, GraphCMS, Prismic</small>
+                            <small>Contentful, GraphCMS, Prismic, Directus</small>
                         </span>
                     </li>
                     <li class="fragment">
                         <em>File-based CMS</em>
                         <br/>
                         <span class="fragment">
-                            <small>Netlify CMS</small>
+                            <small>Netlify CMS, Prose</small>
                         </span>
                     </li>
                 </ul>
@@ -234,14 +239,16 @@
                 <p class="fragment"><em>How?</em></p>
             </section>
             <section>
-                <h2>🍓 JAMStack 🍓</h2>
+                <h2>🍓 JAM Stack 🍓</h2>
                 <blockquote class="fragment">
                     <p>
                         "A modern web development architecture based on client-side <em>J</em>avaScript, reusable <em>A</em>PIs, and prebuilt <em>M</em>arkup."
                     </p>
                     <cite><small>Mathias Biilman, CEO of Netlify</small></cite>
                 </blockquote>
+                <p class="fragment">Build <em>static sites</em> with this stack!</p>
             </section>
+            <!--
             <section>
                 <h2>The three pillars</h2>
                 <ul>
@@ -261,8 +268,8 @@
                         </span>
                     </li>
                 </ul>
-                <p class="fragment">This results in a <em>static site</em></p>
             </section>
+            -->
             <section>
                 <h2>Static sites</h2>
                 <p>Pre-built, static HTML pages, that have been supplied content during a build step.</p>
@@ -333,7 +340,7 @@
                     <li class="fragment" style="line-height: 1; margin-bottom: .33em;">
                         <em>Liberating</em>
                         <br/>
-                        <small class="fragment">More freedom in choosing tools for the frontend</small>
+                        <small class="fragment">More freedom in choosing the right tools for the frontend</small>
                     </li>
                 </ul>
                 <aside class="notes">
@@ -348,23 +355,24 @@
             </section>            <section>
                 <h2>But wait, there's more!</h2>
                 <p class="fragment">This stuff gets way easier:</p>
-                <p>
-                    <em class="fragment">Global CDN,</em>
-                    <em class="fragment">Caching,</em>
-                    <em class="fragment">Cache invalidation,</em>
+                <p class="fragment">
+                    <em>Global CDN,</em>
+                    <em>Caching,</em>
+                    <em>Cache invalidation,</em>
                     <br/>
-                    <em class="fragment">Atomic deploys,</em>
-                    <em class="fragment">Incremental builds,</em>
-                    <em class="fragment">Rollbacks,</em>
+                    <em>Atomic deploys,</em>
+                    <em>Incremental builds,</em>
+                    <em>Rollbacks,</em>
                     <br/>
-                    <em class="fragment">Continuous deployment,</em>
-                    <em class="fragment">Command line deployment,</em>
+                    <em>Continuous deployment,</em>
+                    <em>Command line deployment,</em>
                     <br/>
-                    <em class="fragment">Critical rendering,</em>
-                    <em class="fragment">Asset optimization,</em>
-                    <em class="fragment">etc.</em>
+                    <em>Critical rendering,</em>
+                    <em>Asset optimization,</em>
+                    <em>etc.</em>
                 </p>
             </section>
+            <section data-background-image="img/know-some.gif"></section>
             <!--
             <section>
                 <h2>
@@ -379,7 +387,7 @@
             -->
             <section>
                 <h2>
-                    What is it <em>less</em> suited for?
+                    What is it <em>less*</em> suited for?
                 </h2>
                 <ul>
                     <li class="fragment">Real-time / user-specific data</li>
@@ -388,34 +396,33 @@
                     <li class="fragment">Search</li>
                 </ul>
                 <p class="fragment">
-                    But it's
-                        <em>not impossible</em>...
+                    <small><i><em>*</em> But it's <em>not impossible</em>...</i></small>
                 </p>
             </section>
             <section>
                 <h2>Solutions</h2>
                 <ul>
-                    <li class="fragment">
+                    <li class="fragment" style="line-height: 1; margin-bottom: .5em;">
                         <em>Single Page Apps</em>
                         <br/>
                         <small>React, Angular, Vue</small>
                     </li>
-                    <li class="fragment">
+                    <li class="fragment" style="line-height: 1; margin-bottom: .5em;">
                         <em>Payment &amp; Shopping cart services</em>
                         <br/>
                         <small>Shopify, Stripe</small>
                     </li>
-                    <li class="fragment">
+                    <li class="fragment" style="line-height: 1; margin-bottom: .5em;">
                         <em>Form services</em>
                         <br/>
                         <small>Wufoo, TypeForm, Netlify Forms</small>
                     </li>
-                    <li class="fragment">
+                    <li class="fragment" style="line-height: 1; margin-bottom: .5em;">
                         <em>Search services</em>
                         <br/>
                         <small>Google Search, Amazon Search, Algolia, ElasticSearch</small>
                     </li>
-                    <li class="fragment">
+                    <li class="fragment" style="line-height: 1; margin-bottom: .5em;">
                         <em>Authentication services</em>
                         <br/>
                         <small>Auth0, OAuth, Netlify Identity</small>
@@ -474,9 +481,15 @@
 
             <section>
                 <h2>Applying this architecture</h2>
-                <p><em>Netlify, Contentful and Gatsby</em></p>
+                <p><em>Github, Netlify, Contentful and Gatsby</em></p>
             </section>
 
+            <section>
+                <h2><em>Github</em></h2>
+                <p>Create and clone a repository</p>
+                <p><em><code>gatsby new gatsby-site</code></em></p>
+                <p>Push to <em><code>master</code></em> on Github</p>
+            </section>
             <section>
                 <h2><em>Netlify</em></h2>
                 <p>Create a new site on Netlify</p>
@@ -493,9 +506,13 @@
                 <h2>Deploy settings</h2>
                 <img src="img/netlify-deploy-settings.png" width="500" alt="" style="vertical-align: middle;">
             </section>
+            <section data-background-image="img/boom.gif" data-background-size="contain">
+                <aside class="notes">
+                    <p>You have a site.</p>
+                </aside>
+            </section>
             <section>
-                <h2>💥 Boom. 💥</h2>
-                <p>You have a site.</p>
+                <img src="img/site.png" alt="">
             </section>
 
 
@@ -558,10 +575,12 @@
             </section>
             <section data-background-image="img/gatsby.gif">
             </section>
+            <!--
             <section>
                 <h2>What is GraphQL?</h2>
                 <p>In short, GraphQL is a <em>query language</em> with which you can fetch data from <em>a single smart endpoint</em>, specifying your <em>data query</em> and receiving a JSON response in the <em>same shape</em> of the query.</p>
             </section>
+            -->
             <section>
                 <h2>So how do I show my content?</h2>
                 <p class="fragment">Source plugin!</p>
@@ -685,7 +704,7 @@ export default ArticleOverview;</code></pre>
                 <h2>So...</h2>
                 <p class="fragment">
                     <span class="fragment">
-                        <em>Decouple</em> your frontend with <br><em>a Headless CMS and JAMStack</em> 
+                        <em>Decouple</em> your frontend with <br><em>a Headless CMS and JAM Stack</em> 
                         <br/>
                     </span>
                     <span class="fragment">
@@ -696,6 +715,12 @@ export default ArticleOverview;</code></pre>
                         <em>J</em>avaScript, <em>A</em>PIs and <em>M</em>arkup.
                     </span>
                 </p>
+            </section>
+            <section>
+                <h2>Resources</h2>
+                <p><a href="https://www.staticgen.com/">https://www.staticgen.com/</a></p>
+                <p><a href="https://headlesscms.org/">https://headlesscms.org/</a></p>
+                <p><a href="https://jamstack.org/">https://jamstack.org/</a></p>
             </section>
             <section>
                 <h2>What are your questions?</h2>
