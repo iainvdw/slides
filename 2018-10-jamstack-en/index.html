@@ -47,12 +47,12 @@
             </section>
             <section>
                 <h2>Brief intro</h2>
-                <p>My experience with website development...</p>
+                <p>My experience with web development...</p>
                 <aside class="notes">
                     <p>Past 10 years developing websites.</p>
                     <p>In various CMSes.</p>
                     <p>All with their features and quirks.</p>
-                    <p>Have to learn CMS internals every so often.</p>
+                    <p>Have to learn new CMS internals every so often.</p>
                 </aside>
             </section>
             <section>
@@ -74,6 +74,9 @@
             </section>
             <section data-background-video="img/meh.mp4"  data-background-video-loop>
                 <h2>Meh.</h2>
+                <aside class="notes">
+                    Not ideal from time to time, restrictions from CMS, server, template language.
+                </aside>
             </section>
             <section>
                 <h2>But then...</h2>
@@ -84,6 +87,11 @@
                 <h2>Netlify</h2>
                 <p>Continuous Deployment, Hosting, HTTPS, CDN, Forms, Authentication and more. <small class="fragment"><em>(for free!)</em></small></p>
                 <p class="fragment">But... <em class="fragment">It can only host static files.</em></p>
+                <aside class="notes">
+                    <p>Netlify comes with these features.</p>
+                    <p>For free.</p>
+                    <p>One "major" caveat, only host static files.</p>
+                </aside>
             </section>
             <section>
                 <h2>Static files? And a CMS? 🤔</h2>
@@ -125,7 +133,7 @@
                         <li>No content, no pages, not immediately accessible in a browser.</li>
                         <li>APIs can be queried for content.</li>
                         <li>Sole focus is on the authors/editors.</li>
-                        <li>CMS-as-a-service, Content-as-a-service</li>
+                        <li>CMS-as-a-service, Content-as-a-service, open-source options still available</li>
                         <li>Decoupled from a web context, no URLs, no metadata.</li>
                     </ul>
                 </aside>
@@ -210,22 +218,23 @@
             <section>
                 <h2>CMS options</h2>
                 <ul>
-                    <li class="fragment">
+                    <li class="fragment" style="line-height: 1; margin-bottom: .33em;">
                         <em>Traditional CMSes with extension</em>
                         <br/>
                         <span class="fragment">
                             <small>WordPress REST API, Drupal REST API or GraphQL module </small>
                         </span>
                     </li>
-                    <li class="fragment">
-                        <em>CMSaaS</em>
+                    <li class="fragment" style="line-height: 1; margin-bottom: .33em;">
+                        <em>Pure headless CMS</em>
                         <br/>
                         <span class="fragment">
-                            <small>Contentful, GraphCMS, Prismic, Directus</small>
+                            <small>SaaS: Contentful, GraphCMS, Prismic</small><br>
+                            <small>Open-source: Strapi (Node.js), Ponzu (Go), Directus (PHP)</small>
                         </span>
                     </li>
-                    <li class="fragment">
-                        <em>File-based CMS</em>
+                    <li class="fragment" style="line-height: 1; margin-bottom: .33em;">
+                        <em>File/Git-based CMS</em>
                         <br/>
                         <span class="fragment">
                             <small>Netlify CMS, Prose</small>
