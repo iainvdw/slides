@@ -352,25 +352,47 @@
         </section>
         <section>
           <h2>Grid functions</h2>
-          <p class="fragment"><code>minmax(200px, 1fr)</code>: Give the column a min and max size.</p>
-          <p class="fragment"><code>repeat(3, 1fr)</code>: Repeat the given size for an amount of columns</p>
-          <p class="fragment"><code>repeat(auto-fill, 1fr)</code>: Repeat the given size for an amount of columns</p>
-          <p class="fragment"><code>repeat(auto-fit, 1fr)</code>: Repeat the given size for an amount of columns</p>
+          <p class="fragment"><code>minmax(200px, 1fr)</code>: Give the column/row a min and max size.</p>
+          <p class="fragment"><code>repeat(3, 1fr)</code>: Repeat the given size for an amount of columns/rows</p>
+          <p class="fragment">
+            <code>repeat(auto-fit, minmax(100px, 1fr))</code>: Fit the width/height of the container using the max size
+          </p>
+          <p class="fragment">
+            <code>repeat(auto-fill, minmax(100px, 1fr))</code>: Fill the width/height of the container using the min
+            size
+          </p>
         </section>
         <section>
-          <h2>Combining this 🧙‍♂️✨</h2>
-          <p class="fragment">
-            <code>grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))</code><br />
-            Give the column a min and max size.
+          <h2>This is magic 🧙‍♂️✨</h2>
+          <p
+            class="codepen"
+            data-height="400"
+            data-theme-id="0"
+            data-default-tab="result"
+            data-user="SaraSoueidan"
+            data-slug-hash="JrLdBQ"
+            style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="auto-fill vs auto-fit"
+          >
+            <span
+              >See the Pen <a href="https://codepen.io/SaraSoueidan/pen/JrLdBQ/"> auto-fill vs auto-fit</a> by Sara
+              Soueidan (<a href="https://codepen.io/SaraSoueidan">@SaraSoueidan</a>) on
+              <a href="https://codepen.io">CodePen</a>.</span
+            >
           </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
         </section>
         <section>
           <h2>When do you use Grid Layout?</h2>
           <ul>
-            <li class="fragment">Wanneer je elementen zowel verticaal als horizontaal wilt kunnen positioneren</li>
-            <li class="fragment">Wanneer items zijn opgemaakt in een grid (producten, nieuws)</li>
+            <li class="fragment">When you need to lay out elements in two dimensions</li>
+            <li class="fragment">Whenever you see a grid (products, tiles, etc.)</li>
             <li class="fragment">
-              Complexe layouts met over elkaar gepositioneerde elementen (posters, headers, (typo)grafische layouts)
+              Complex layouts whenever you need elements on top of each other aligned in a grid (<a
+                href="https://iainvdw.github.io/css-layout-workshop/oefeningen/06-poster/poster.html"
+                target="_blank"
+                >typographic posters</a
+              >)
             </li>
           </ul>
         </section>
@@ -400,25 +422,25 @@
               <tr>
                 <td>
                   <p>
-                    Werkt op de
+                    Works with the
                     <em>content</em>
                   </p>
                 </td>
                 <td>
                   <p>
-                    Werkt op de
+                    Works with the
                     <em>container</em>
                   </p>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <p><em>Gedrag op container</em>, formaten op elementen</p>
+                  <p><em>Behaviour on the container</em>, sizing on elements</p>
                 </td>
                 <td>
                   <p>
-                    Formaten op container,
-                    <em>gedrag op elementen</em>
+                    Sizing on the container,
+                    <em>behaviour on elements</em>
                   </p>
                 </td>
               </tr>
@@ -426,31 +448,32 @@
           </table>
         </section>
         <section>
-          <h2>Waar is CSS Grid Layout goed in?</h2>
+          <h2>CSS Grid is great at:</h2>
           <ul>
-            <li class="fragment">Elementen over 2 assen positioneren</li>
-            <li class="fragment">Elementen elkaar laten overlappen</li>
-            <li class="fragment">Layout op container niveau</li>
-            <li class="fragment">Layout op basis van media queries</li>
-            <li class="fragment">Kolommen aanmaken / laten passen adhv content</li>
-            <li class="fragment">Consistente ruimtes tussen kolommen en rijen</li>
+            <li class="fragment">Position elements on 2 axes</li>
+            <li class="fragment">Overlap elements withing a grid</li>
+            <li class="fragment">Layout on container level</li>
+            <li class="fragment">Layout based on media queries</li>
+            <li class="fragment">Auto-create and -fit colums and rows based on content</li>
+            <li class="fragment">Consistent spacing between cells</li>
           </ul>
         </section>
         <section>
-          <h2>Wat kan CSS Grid niet (goed)?</h2>
+          <h2>CSS Grid isn't good at:</h2>
           <ul>
-            <li class="fragment">Elementen "buiten de lijntjes" plaatsen</li>
-            <li class="fragment">Masonry-achtige layouts</li>
-            <li class="fragment">Animeren van cell posities*</li>
+            <li class="fragment">Position element "outside the box"</li>
+            <li class="fragment">Masonry layouts</li>
+            <li class="fragment">Animating van cell positions*</li>
           </ul>
           <p class="fragment">
             <small
-              >* Niet met CSS, wel met <a href="https://codepen.io/aholachek/pen/VXjOPB" target="_blank">JS</a> 🔥
+              >* Not with CSS, but it can be done with
+              <a href="https://codepen.io/aholachek/pen/VXjOPB" target="_blank">JS</a> 🔥
             </small>
           </p>
         </section>
         <section>
-          <h2>Voorbeelden</h2>
+          <h2>Examples</h2>
           <ul>
             <li>
               <a href="https://codepen.io/Rplus/pen/JWNEOO">Codepen</a>
@@ -459,13 +482,13 @@
               <a href="https://iainvdw.github.io/css-layout-workshop/oefeningen/06-poster/poster.html">Poster</a>
             </li>
             <li>
-              <a href="https://amarant.ebox/app_dev.php/nieuws">Amarant nieuws</a>
+              <a href="https://www.amarant.nl/nieuws">Amarant news overview</a>
             </li>
             <li>
-              <a href="#">Handpicked festival schedule (TBA)</a>
+              <a href="https://festival.handpickedagencies.com">Handpicked festival schedule</a>
             </li>
             <li>
-              <a href="#">Bluebird Day (TBA)</a>
+              <a href="https://www.bluebirdday.nl/ons-werk">Bluebird Day</a>
             </li>
           </ul>
         </section>
@@ -479,10 +502,13 @@
               <a href="http://cssgridgarden.com/#nl">CSS Grid Garden</a>
             </li>
             <li class="fragment">
-              <a href="https://cssgrid.io">CSS Grid course van Wes Bos</a>
+              <a href="https://cssgrid.io">CSS Grid course by Wes Bos</a>
             </li>
             <li class="fragment">
               <a href="https://gridbyexample.com/examples/">Grid by example</a>
+            </li>
+            <li class="fragment">
+              <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSSTricks Grid cheatsheet</a>
             </li>
           </ul>
         </section>
